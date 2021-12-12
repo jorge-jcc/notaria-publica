@@ -3,12 +3,16 @@
 // Soft UI Dashboard React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import MDAvatar from "components/MDAvatar";
 import MDBadge from "components/MDBadge";
+import team2 from "assets/images/team-2.jpg";
+import team3 from "assets/images/team-3.jpg";
+import team4 from "assets/images/team-4.jpg";
 
 export default function data() {
-
-  const Escritura = ({ name, email }) => (
+  const Author = ({ image, name, email }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
+      <MDAvatar src={image} name={name} size="sm" />
       <MDBox ml={2} lineHeight={1}>
         <MDTypography display="block" variant="button" fontWeight="medium">
           {name}
@@ -29,7 +33,7 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "Identificador", accessor: "Escritura", width: "45%", align: "left" },
+      { Header: "author", accessor: "author", width: "45%", align: "left" },
       { Header: "function", accessor: "function", align: "left" },
       { Header: "status", accessor: "status", align: "center" },
       { Header: "employed", accessor: "employed", align: "center" },
@@ -38,7 +42,7 @@ export default function data() {
 
     rows: [
       {
-        Escritura: <Escritura name="Volumen: 123123123" email="Instrumento: 123123" />,
+        author: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
         function: <Job title="Manager" description="Organization" />,
         status: (
           <MDBox ml={-1}>
@@ -57,7 +61,7 @@ export default function data() {
         ),
       },
       {
-        Escritura: <Escritura name="Alexa Liras" email="alexa@creative-tim.com" />,
+        author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
         function: <Job title="Programator" description="Developer" />,
         status: (
           <MDBox ml={-1}>
@@ -76,7 +80,7 @@ export default function data() {
         ),
       },
       {
-        Escritura: <Escritura name="Laurent Perrier" email="laurent@creative-tim.com" />,
+        author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
         function: <Job title="Executive" description="Projects" />,
         status: (
           <MDBox ml={-1}>
@@ -95,7 +99,7 @@ export default function data() {
         ),
       },
       {
-        Escritura: <Escritura name="Michael Levi" email="michael@creative-tim.com" />,
+        author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
         function: <Job title="Programator" description="Developer" />,
         status: (
           <MDBox ml={-1}>
@@ -114,7 +118,7 @@ export default function data() {
         ),
       },
       {
-        Escritura: <Escritura name="Richard Gran" email="richard@creative-tim.com" />,
+        author: <Author image={team3} name="Richard Gran" email="richard@creative-tim.com" />,
         function: <Job title="Manager" description="Executive" />,
         status: (
           <MDBox ml={-1}>
@@ -133,7 +137,7 @@ export default function data() {
         ),
       },
       {
-        Escritura: <Escritura name="Miriam Eric" email="miriam@creative-tim.com" />,
+        author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
         function: <Job title="Programator" description="Developer" />,
         status: (
           <MDBox ml={-1}>
