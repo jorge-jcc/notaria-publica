@@ -1,6 +1,6 @@
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
-import Billing from "layouts/billing";
+import CreateEscritura from "layouts/createEscritura";
 import Icon from "@mui/material/Icon";
 
 const routes = [
@@ -22,11 +22,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Billing",
-    key: "billing",
+    name: "Nueva Escritura",
+    key: "createEscritura",
     icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
-    component: <Billing />,
+    route: "/createEscritura",
+    component: <CreateEscritura />,
   },
 ];
 
